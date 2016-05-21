@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     System.config({
         packages: {
             app: {

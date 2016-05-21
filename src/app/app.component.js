@@ -25,8 +25,6 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     this.mainText = "This is the main content";
                     this.footerText = "This is the footer content";
                 }
-                AppComponent.prototype.ngOnInit = function () {
-                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',

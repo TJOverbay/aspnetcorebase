@@ -11,30 +11,30 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var WidgetComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            WidgetComponent = (function () {
+                function WidgetComponent() {
                 }
-                AppComponent.prototype.ngOnInit = function () {
+                WidgetComponent.prototype.ngOnInit = function () {
                 };
-                AppComponent = __decorate([
+                WidgetComponent = __decorate([
                     core_1.Component({
-                        selector: 'oz-app',
-                        templateUrl: 'app/app.component.html',
-                        styleUrls: ['app/app.component.css']
+                        selector: 'widget',
+                        templateUrl: 'app/widget.component.html',
+                        styleUrls: ['app/widget.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], WidgetComponent);
+                return WidgetComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("WidgetComponent", WidgetComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=widget.component.js.map

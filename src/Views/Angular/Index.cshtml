@@ -1,0 +1,33 @@
+﻿@*
+  For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+  <base href='@Url.Content("~/")'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Page</title>
+  <link href="~/css/site-ang.css" rel="stylesheet">
+
+  <script src="~/lib/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+  <script src="~/lib/es6-shim/es6-shim.min.js"></script>
+  <script src="~/lib/systemjs/dist/system-polyfills.js"></script>
+  <script src="~/lib/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="~/lib/systemjs/dist/system.js"></script>
+  <script src="~/lib/rxjs/bundles/Rx.js"></script>
+  <script src="~/lib/angular2/bundles/angular2.dev.js"></script>
+  <!-- Required for http -->
+  <script src="~/lib/angular2/bundles/http.dev.js"></script>
+
+  <!-- Required for routing -->
+  <script src="~/lib/angular2/bundles/router.dev.js"></script>
+</head>
+<body>
+  <my-app>Loading...</my-app>
+  <script src="~/app/site.js"></script>
+</body>
+</html>
