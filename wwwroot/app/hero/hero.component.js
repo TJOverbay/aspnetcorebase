@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,32 +11,30 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var HeroComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
-                    this.pageTitle = "ASP.NET Core Base";
-                    this.headerText = "This is the header content";
-                    this.mainText = "This is the main content";
-                    this.footerText = "This is the footer content";
+            HeroComponent = (function () {
+                function HeroComponent() {
                 }
-                AppComponent = __decorate([
+                HeroComponent.prototype.ngOnInit = function () {
+                };
+                HeroComponent = __decorate([
                     core_1.Component({
-                        selector: "my-app",
-                        templateUrl: "app/app.component.html",
-                        styleUrls: ["app/app.component.css"]
+                        selector: 'hero',
+                        templateUrl: 'app/hero.component.html',
+                        styleUrls: ['app/hero.component.css']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], HeroComponent);
+                return HeroComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("HeroComponent", HeroComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=hero.component.js.map

@@ -8,23 +8,19 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify");
 
 var webroot = "./wwwroot/";
-var tsRoot = "./app/";
-var modRoot = "./node_modules/";
-var ang2 = modRoot + "angular2/bundles/";
-var sysJs = modRoot + "systemjs/dist/";
+var npmSrc = "./node_modules/";
+var ang2 = npmSrc + "angular2/bundles/";
+var sysJs = npmSrc + "systemjs/dist/";
 
 var paths = {
-    ts: tsRoot + "**/*.ts",
-    dts: tsRoot + "**/*.d.ts",
-    jsSrc: [tsRoot + "**/*.js", tsRoot + "**/*.map", tsRoot + "**/*.view.html"],
     js: webroot + "js/**/*.js",
     minJs: webroot + "js/**/*.min.js",
     libJs: [
         ang2 + "**/*.js", ang2 + "**/*.map",
         sysJs + "**/*.js", sysJs + "**/*.map",
-        modRoot + "angular2/es6/dev/src/testing/shims_for_IE.js",
-        modRoot + "es6-shim/es6-shim.*",
-        modRoot + "rxjs/bundles/**/Rx*.*"
+        npmSrc + "angular2/es6/dev/src/testing/shims_for_IE.js",
+        npmSrc + "es6-shim/es6-shim.*",
+        npmSrc + "rxjs/bundles/**/Rx*.*"
     ],
     css: webroot + "css/**/*.css",
     minCss: webroot + "css/**/*.min.css",
@@ -57,11 +53,6 @@ gulp.task("min:css", function () {
 });
 
 gulp.task("min", ["min:js", "min:css"]);
-
-gulp.task("client:js", function (cb) {
-    return gulp.src(paths.jsSrc, { base: tsRoot })
-        .pipe(gulp.dest(webroot + "app"));
-});
 
 gulp.task("lib:js", function (cb) {
     return gulp.src(paths.libJs, { base: "./node_modules/" })

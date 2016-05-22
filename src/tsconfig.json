@@ -12,7 +12,7 @@
   },
   "exclude": [
     "node_modules",
-    "wwwroot",
+    "wwwroot/lib",
     "typings/main",
     "typings/main.d.ts",
     "typings/browser",

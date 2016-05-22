@@ -4,6 +4,10 @@
             app: {
                 format: "register",
                 defaultExtension: "js"
+            },
+            lib: {
+                format: "register",
+                defaultExtension: "js"
             }
         }
     });

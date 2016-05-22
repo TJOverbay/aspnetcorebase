@@ -28,6 +28,24 @@
 </head>
 <body>
   <my-app>Loading...</my-app>
-  <script src="~/app/site.js"></script>
+  <script>
+    (function () {
+      System.config({
+        packages: {
+          app: {
+            format: "register",
+            defaultExtension: "js"
+          },
+          lib: {
+            format: "register",
+            defaultExtension: "js"
+          }
+        }
+      });
+      System.import("app/main")
+          .then(null, console.error.bind(console));
+    })();
+  </script>
+@*  <script src="~/app/site.js"></script>*@
 </body>
 </html>
